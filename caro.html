@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+</head>
+<body>
+  <script>
+    var array = [];
+    for (var i=0;i<5;i++){
+      array[i]=[0,0,0,0,0]
+    }
+    function hienthi() {
+      var s="";
+      for (var i=0;i<5;i++) {
+        for (var j = 0; j < 5; j++) {
+          s=s+array[i][j]+" ";
+        }
+        s+="<br>";
+      }
+      document.getElementById("divID").innerHTML=s;
+    }
+    function changeValue() {
+      var x = prompt("Nhập chỉ số dòng: ",0);
+      var y = prompt("Nhập chỉ số cột: ",0);
+      array[x][y]="x";
+      hienthi();
+
+    }
+  </script>
+  <button type="button" onclick="hienthi()">Bắt đầu</button>
+  <div id="divID"></div>
+  <button type="button" onclick="changeValue()">Change Value</button>
+</body>
+</html>
